@@ -15,7 +15,7 @@ def nose(x,y):
     begin_fill()
     a = 0.4
     for i in range(120):
-        if 0 <= i < 30 or 60 <= i <90:
+        if 0 <= i < 30 or 60 <= i < 90:
             a = a + 0.08
             # 向左转3度
             left(3)
@@ -55,7 +55,7 @@ def head(x, y):
     """画头"""
     color((255, 155, 192), "pink")
     penup()
-    goto(x,y)
+    goto(x, y)
     setheading(0)
     pendown()
     begin_fill()
@@ -73,10 +73,10 @@ def head(x, y):
     setheading(-30)
     a = 0.4
     for i in range(60):
-        if 0<= i < 30 or 60 <= i < 90:
+        if 0 <= i < 30 or 60 <= i < 90:
             a = a + 0.08
-            lt(3) #向左转3度
-            fd(a) #向前走a的步长
+            lt(3)  # 向左转3度
+            fd(a)  # 向前走a的步长
         else:
             a = a - 0.08
             lt(3)
@@ -84,7 +84,7 @@ def head(x, y):
     end_fill()
 
 
-def ears(x,y):
+def ears(x, y):
     """画耳朵"""
     color((255, 155, 192), "pink")
     penup()
@@ -158,7 +158,7 @@ def cheek(x,y):
     """画脸颊"""
     color((255, 155, 192))
     penup()
-    goto(x,y)
+    goto(x, y)
     pendown()
     setheading(0)
     begin_fill()
@@ -166,7 +166,7 @@ def cheek(x,y):
     end_fill()
 
 
-def mouth(x,y):
+def mouth(x, y):
     """画嘴巴"""
     color(239, 69, 19)
     penup()
@@ -190,7 +190,7 @@ def setting():
 
 def main():
     """主函数"""
-    setting() 
+    setting()
     nose(-100, 100)
     head(-69, 167)
     ears(0, 160)
